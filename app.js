@@ -4,7 +4,7 @@ const indexRouter = require('./routes/indexRouter');
 const messagesRouter = require('./routes/messagesRouter');
 
 const assetsPath = path.join(__dirname, 'public');
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
