@@ -30,10 +30,10 @@
         <ul>
           <% for(let i = 0; i < messages.length; i++) { %>
           <li>
-            <div class="sign"><%= messages[i].user[0] %></div>
+            <div class="sign"><%= messages[i].username[0] %></div>
             <div style="width: 100%">
               <div class="m-user-cont">
-                <p class="m-user"><%= messages[i].user %></p>
+                <p class="m-user"><%= messages[i].username %></p>
                 <p class="m-added"><%= messages[i].added %></p>
               </div>
               <p class="m-box"><%= messages[i].text %></p>
@@ -42,6 +42,9 @@
               >
             </div>
           </li>
+          <% } %>
+          <% if(messages.length === 0) { %>
+            <p>None</p>
           <% } %>
         </ul>
       </div>

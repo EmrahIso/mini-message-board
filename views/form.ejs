@@ -41,10 +41,16 @@
             </div>
           </div>
           <button type="submit">Submit</button>
-          <% if (error) { %>
-          <p class="form-invalid-message"><%= error %></p>
-          <% } %>
-        </form>
+          <ul>
+            <% if (errors) { %>
+              <% for(let i = 0; i < errors.length; i++) { %>
+                <li>
+                <p class="form-invalid-message"><%= errors[i].msg %></p>
+                </li>
+              <% } %>
+            <% } %>
+          </ul>
+       </form>
       </div>
     </main>
   </body>
